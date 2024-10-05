@@ -14,7 +14,6 @@ const Skills = () => {
 
   useEffect(() => {
     setVisibleSection("skills");
-    console.log("Skills", inView);
   }, [inView]);
 
   return (

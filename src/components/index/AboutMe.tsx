@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import eryk from "../../../public/eryk.jpg";
+import eryk from "../../../public/eryk.png";
 import { useInView } from "react-intersection-observer";
 import useNavigationStore, { IUseNavigationStore } from "@/state/navigation";
 import THRESHOLD from "./threshold";
@@ -16,7 +16,6 @@ const AboutMe = () => {
 
   useEffect(() => {
     setVisibleSection("about-me");
-    console.log("AboutMe", inView);
   }, [inView]);
 
   return (

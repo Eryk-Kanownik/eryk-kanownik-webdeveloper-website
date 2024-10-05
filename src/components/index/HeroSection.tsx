@@ -15,7 +15,6 @@ const HeroSection = () => {
 
   useEffect(() => {
     setVisibleSection("hero-section");
-    console.log("Hero", inView);
   }, [inView]);
 
   return (

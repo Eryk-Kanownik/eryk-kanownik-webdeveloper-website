@@ -16,7 +16,6 @@ const Projects = () => {
 
   useEffect(() => {
     setVisibleSection("projects");
-    console.log("projects", inView);
   }, [inView]);
 
   return (
