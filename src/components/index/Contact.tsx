@@ -9,7 +9,7 @@ const Contact = () => {
   const { setVisibleSection } = useNavigationStore(
     (state: IUseNavigationStore) => state
   );
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: THRESHOLD,
   });
 
@@ -18,7 +18,7 @@ const Contact = () => {
   }, [inView]);
 
   return (
-    <section id="contact" className="bg-blue-600 text-white py-20">
+    <section ref={ref} id="contact" className="bg-blue-600 text-white py-20">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-8">Skontaktuj się ze mną</h2>
         <div className="flex justify-center space-x-4">

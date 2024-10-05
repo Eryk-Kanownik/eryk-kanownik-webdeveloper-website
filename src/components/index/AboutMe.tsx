@@ -10,7 +10,7 @@ const AboutMe = () => {
   const { setVisibleSection } = useNavigationStore(
     (state: IUseNavigationStore) => state
   );
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: THRESHOLD,
   });
 
