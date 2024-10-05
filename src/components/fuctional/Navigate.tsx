@@ -1,7 +1,7 @@
 "use client";
 import useNavigationStore, { IUseNavigationStore } from "@/state/navigation";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 const Navigate = () => {
   const navigateRef = useRef<null | HTMLDivElement>(null);
