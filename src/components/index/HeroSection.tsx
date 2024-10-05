@@ -38,7 +38,7 @@ const HeroSection = () => {
         loop
         muted>
         <source src="./hero-background-video.mp4" type="video/mp4" />
-        Sorry, your browser doesn't support videos.
+        Sorry, your browser doesn&apos;t support videos.
       </video>
     </section>
   );

@@ -16,7 +16,7 @@ const useNavigationStore = create<IUseNavigationStore>((set) => ({
   visibleSection: "hero-section",
   setVisibleSection: (
     section: "hero-section" | "about-me" | "projects" | "skills" | "contact"
-  ) => set((state: any) => ({ visibleSection: section })),
+  ) => set(() => ({ visibleSection: section })),
 }));
 
 export default useNavigationStore;
