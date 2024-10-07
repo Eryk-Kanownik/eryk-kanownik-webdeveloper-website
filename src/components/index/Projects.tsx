@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import useNavigationStore, { IUseNavigationStore } from "@/state/navigation";
 import { useInView } from "react-intersection-observer";
 import THRESHOLD from "./threshold";
