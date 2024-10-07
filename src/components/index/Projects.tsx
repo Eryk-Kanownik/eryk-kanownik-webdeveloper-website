@@ -5,6 +5,7 @@ import Link from "next/link";
 import useNavigationStore, { IUseNavigationStore } from "@/state/navigation";
 import { useInView } from "react-intersection-observer";
 import THRESHOLD from "./threshold";
+import Project from "../cards/Project";
 
 const Projects = () => {
   const { setVisibleSection } = useNavigationStore(
@@ -18,6 +19,7 @@ const Projects = () => {
     setVisibleSection("projects");
   }, [inView]);
 
+  const delay = 200;
   return (
     <section
       ref={ref}
@@ -27,29 +29,19 @@ const Projects = () => {
         <h2 className="text-3xl font-bold text-center mb-8">
           Wybrane Projekty
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((project) => (
-            <div
-              key={project}
-              className="bg-white rounded-lg shadow-md overflow-hidden">
-              <Image
-                src={`/placeholder.svg?height=200&width=300&text=Projekt ${project}`}
-                width={300}
-                height={200}
-                alt={`Projekt ${project}`}
-                className="w-full"
+          {[1, 2, 3].map((project, index) => {
+            return (
+              <Project
+                key={index}
+                index={index}
+                inView={inView}
+                delay={delay * index}
+                project={project}
               />
-              <div className="p-4">
-                <h3 className="font-bold text-xl mb-2">Projekt {project}</h3>
-                <p className="text-gray-700 mb-4">
-                  Krótki opis projektu i wykorzystanych technologii.
-                </p>
-                <Link href="#" className="text-blue-600 hover:text-blue-800">
-                  Zobacz więcej
-                </Link>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

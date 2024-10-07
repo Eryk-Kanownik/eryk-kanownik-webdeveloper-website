@@ -21,8 +21,11 @@ const HeroSection = () => {
     <section
       ref={ref}
       id="hero-section"
-      className="bg-blue-600 text-white py-20 h-screen max-h-screen flex justify-center items-center overflow-hidden">
-      <div className="container mx-auto px-6 text-center z-10">
+      className={`text-white py-20 h-screen max-h-screen flex justify-center items-center overflow-hidden`}>
+      <div
+        className={`duration-500 container mx-auto px-6 text-center z-10   ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+        }`}>
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Eryk Kanownik</h1>
         <p className="text-xl mb-8">Full Stack Web Developer</p>
         <Link
